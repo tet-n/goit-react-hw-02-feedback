@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-// import css from './Section.module.css';
+import { SectionWrapper, Title } from './Sections.styled';
 
-export const Section = ({ title, children }) => {
+export const Section = ({ title, children, another }) => {
   return (
-    <section>
-      <h2>{title}</h2>
+    <SectionWrapper another={another}>
+      <Title another={another}>{title}</Title>
       {children}
-    </section>
+    </SectionWrapper>
   );
 };
 

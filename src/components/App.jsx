@@ -29,14 +29,13 @@ export class App extends Component {
     const { good, neutral, bad } = this.state;
     return (
       <div>
-        {' '}
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={Object.keys(this.state)}
             onLeaveFeedback={this.onLeaveFeedback}
           />
         </Section>
-        <Section title="Statistics">
+        <Section title="Statistics" another>
           {(this.countTotalFeedback() && (
             <Statistics
               good={good}
