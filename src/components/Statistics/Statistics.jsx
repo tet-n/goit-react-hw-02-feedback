@@ -20,10 +20,10 @@ export const Statistics = ({
         Bad: <Span>{bad}</Span>
       </Item>
       <Item>
-        Total: <Span>{total()}</Span>
+        Total: <Span>{total}</Span>
       </Item>
       <Item>
-        Positive feedbacks: <Span>{positivePercentage()}%</Span>
+        Positive feedbacks: <Span>{positivePercentage}%</Span>
       </Item>
     </ul>
   );
@@ -33,6 +33,6 @@ Statistics.propTypes = {
   good: PropTypes.number.isRequired,
   bad: PropTypes.number.isRequired,
   neutral: PropTypes.number.isRequired,
-  total: PropTypes.func.isRequired,
-  positivePercentage: PropTypes.func.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
 };

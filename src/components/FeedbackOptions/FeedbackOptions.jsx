@@ -1,6 +1,11 @@
 import PropTypes from 'prop-types';
 import { List, Button } from './FeedbackOptions.styled';
 import { CgSmile, CgSmileNone, CgSmileSad } from 'react-icons/cg';
+const icons = {
+  bad: <CgSmileSad />,
+  good: <CgSmile />,
+  neutral: <CgSmileNone />,
+};
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
@@ -12,9 +17,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
             type="button"
             onClick={() => onLeaveFeedback(option)}
           >
-            {(option === 'bad' && <CgSmileSad />) ||
-              (option === 'good' && <CgSmile />) ||
-              (option === 'neutral' && <CgSmileNone />)}
+            {icons[option]}
             {option.replace(option[0], option[0].toUpperCase())}
           </Button>
         </li>
